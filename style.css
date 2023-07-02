@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #E52168;
+  --dark: #262326;
+  --gray: #3D383D;
+  --gray-200: #3D383D;
+  --gray-line: #3D383D20;
+  --light: #FCF4F7;
+  --gradient: linear-gradient(45deg, #3C3439 0%, #2E2B2E 75.71%);
+  --border-radius-1: 4px;
+  --border-radius-2: 8px;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: var(--dark);
+  color: var(--light);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  background: var(--dark);
+  height: 70px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 32px 16px 8px 16px;
+  border-bottom: 1px solid var(--gray);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0 220px 0;
+}
+
+.count {
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  line-height: 0;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background: var(--primary);
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.item {
+  width: -webkit-fill-available;
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.imagem {
+  background: var(--gray);
+  min-width: 96px;
+  height: 64px;
+  border-radius: var(--border-radius-2);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-1 {
+  background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/estadao/4OZV6DIZWZNWXFZVBWITHCIEDI.jpg");
+}
+
+.img-2 {
+  background-image: url("https://anamariabraga.globo.com/wp-content/uploads/2019/11/drink-lagoa-azul.jpg");
+}
+
+.img-3 {
+  background-image: url("https://wallpapercave.com/wp/wp2392017.jpg");
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.itens {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.nome {
+  gap: 8px;
+}
+
+.item-nome {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.item-preco {
+  text-align: right;
+}
+
+.adicional {
+  opacity: .4;
+  font-size: 14px;
+}
+
+.quantidade {
+  display: flex;
+  width: max-content;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--gray);
+  margin-top: 16px;
+}
+
+.remover, .adicionar, .total {
+  display: grid;
+  place-items: center;
+  line-height: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.remover, .adicionar {
+  background: var(--gray);
+  width: 24px;
+  border: none;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.total {
+  width: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(0deg, hsl(300, 3%, 14%), hsl(323, 7%, 22%));
+  border-radius: 12px 12px 0 0;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid var(--gray);
+}
+
+.padding {
+  display: flex;
+  padding: 8px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-2);
+  background: var(--gray);
+  color: var(--light);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.total-amount {
+  margin-bottom: 8px;
+}
+
+.total-amount span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.primary, .secondary {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--light);
+  border-radius: var(--border-radius-2);
+}
+
+.primary {
+  background: var(--primary);
+}
+
+.secondary {
+  background: var(--gray-200);
+}
+
+.ocultar-modal {
+  display: none;
+}
+
+.checkout {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background: #12121499;
+  top: 0;
+  z-index: 1;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  background: var(--light);
+  border-radius: var(--border-radius-2);
+  color: var(--dark);
+}
+
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+#closed-modal {
+  border: none;
+  background: none;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-line);
+  padding: 16px 0;
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.credit-card span {
+  font-size: 11px;
+  opacity: .4;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ocult {
+  width: 4px;
+  height: 4px;
+  background: var(--dark);
+  border-radius: 50px;
+}
+
+.edit-credit {
+  border: none;
+  background: white;
+  padding: 8px;
+  border-radius: var(--border-radius-1);
+  font-size: 12px;
+  font-weight: 600;
+  height: max-content;
+}
+
+.add-credit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 0;
+  color: var(--primary);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-line);
+}
+
+.actions-modal {
+  margin-top: 16px;
+}
+
+.actions-modal .secondary {
+  background: #FFFFFF;
+  margin-top: 8px;
+  color: var(--primary);
+}
+
+@media (min-width: 600px) {
+  footer {
+    height: 300px;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+  
+  .modal {
+    width: 480px;
+  }
+
+  .itens {
+    grid-template-columns: 90% 1fr;
+  }
+}

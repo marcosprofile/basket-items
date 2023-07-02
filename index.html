@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Basket</title>
+</head>
+
+<body>
+  <header>
+    Cart
+    <div class="count" id="count"></div>
+  </header>
+  <main>
+    <section class="basket">
+      <div class="item">
+        <div class="imagem img-1"></div>
+        <div class="info">
+          <div class="itens">
+            <span class="item-nome">Japanese (sushi, sashimi, hot roll)</span>
+            <span class="item-preco" id="preco-1"></span>
+          </div>
+          <div class="quantidade">
+            <button class="remover" onclick="remover(1)">-</button>
+            <div class="total" id="1"></div>
+            <button class="adicionar" onclick="adicionar(1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="imagem img-2"></div>
+        <div class="info">
+          <div class="itens">
+            <span class="item-nome">Drink blue lagoon</span>
+            <span class="item-preco" id="preco-2"></span>
+          </div>
+          <div class="itens">
+            <span class="item-nome adicional">Triple Shoco</span>
+            <span class="item-preco adicional">$3</span>
+          </div>
+          <div class="itens">
+            <span class="item-nome adicional">Triple Shoco</span>
+            <span class="item-preco adicional">$3</span>
+          </div>
+          <div class="quantidade">
+            <button class="remover" onclick="remover(2)">-</button>
+            <div class="total" id="2"></div>
+            <button class="adicionar" onclick="adicionar(2)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="imagem img-3"></div>
+        <div class="info">
+          <div class="itens">
+            <span class="item-nome">Savory Margherita</span>
+            <span class="item-preco" id="preco-3"></span>
+          </div>
+          <div class="itens">
+            <span class="item-nome adicional">Triple Savory</span>
+            <span class="item-preco adicional">$3</span>
+          </div>
+          <div class="quantidade">
+            <button class="remover" onclick="remover(3)">-</button>
+            <div class="total" id="3"></div>
+            <button class="adicionar" onclick="adicionar(3)">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="checkout" id="modal-payment">
+    <div class="modal">
+      <div class="top">
+        Checkout
+        <button id="closed-modal" onclick="checkout(closed)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="card">
+        <div class="credit-card">
+          <div class="number">
+            <?xml version="1.0" ?>
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg
+                  height="32px"
+                  style="enable-background:new 0 0 512 512;"
+                  version="1.1"
+                  viewBox="0 0 512 512"
+                  width="32px"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="形状_1_3_" style="enable-background:new;">
+                    <g id="形状_1">
+                      <g>
+                        <path
+                          d="M211.328,184.445l-23.465,144.208h37.542l23.468-144.208 H211.328z M156.276,184.445l-35.794,99.185l-4.234-21.358l0.003,0.007l-0.933-4.787c-4.332-9.336-14.365-27.08-33.31-42.223 c-5.601-4.476-11.247-8.296-16.705-11.559l32.531,124.943h39.116l59.733-144.208H156.276z M302.797,224.48 c0-16.304,36.563-14.209,52.629-5.356l5.357-30.972c0,0-16.534-6.288-33.768-6.288c-18.632,0-62.875,8.148-62.875,47.739 c0,37.26,51.928,37.723,51.928,57.285c0,19.562-46.574,16.066-61.944,3.726l-5.586,32.373c0,0,16.763,8.148,42.382,8.148 c25.616,0,64.272-13.271,64.272-49.37C355.192,244.272,302.797,240.78,302.797,224.48z M455.997,184.445h-30.185     c-13.938,0-17.332,10.747-17.332,10.747l-55.988,133.461h39.131l7.828-21.419h47.728l4.403,21.419h34.472L455.997,184.445z      M410.27,277.641l19.728-53.966l11.098,53.966H410.27z"
+                          style="fill-rule:evenodd;clip-rule:evenodd;fill:#005BAC;"/>
+                      </g>
+                    </g>
+                  </g>
+                    <g id="形状_1_2_" style="enable-background:new;">
+                      <g id="形状_1_1_">
+                        <g>
+                          <path
+                            d="M104.132,198.022c0,0-1.554-13.015-18.144-13.015H25.715     l-0.706,2.446c0,0,28.972,5.906,56.767,28.033c26.562,21.148,35.227,47.51,35.227,47.51L104.132,198.022z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#F6AC1D;"/>
+                        </g>
+                      </g>
+                    </g>
+                </svg>
+            <div class="ocult"></div>
+            <div class="ocult"></div>
+            <div class="ocult"></div>
+            <div class="ocult"></div>
+            <div class="ocult"></div>
+            <div class="ocult"></div>
+            1667
+          </div>
+          <span>Expiration 03/2030</span>
+        </div>
+        <button class="edit-credit">Edit Card</button>
+      </div>
+      <div class="add-credit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+        Add new credit card
+      </div>
+      <div class="actions-modal">
+        <button class="primary" id="btn-payment"></button>
+        <button class="secondary">Clear Basket</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-section">
+      <div class="padding">
+        Discount
+        <button class="add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+          </svg>
+          Add
+        </button>
+      </div>
+      <div class="padding">
+        Tax
+        <span id="compra-taxa"></span>
+      </div>
+      <div class="padding total-amount">
+        Total amount
+        <span id="total-amount"></span>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="secondary">Clear Basket</button>
+      <button class="primary" onclick="checkout(open)">Pay</button>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
